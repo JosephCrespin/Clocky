@@ -1,31 +1,5 @@
 "use strict"
 
-
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-const days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-
 function formatTime(date) {
   const days = Math.floor(date / (1000 * 60 * 60 * 24));
   const hours = Math.floor(date / 1000 / 60 / 60) % 24;
@@ -37,7 +11,6 @@ function formatTime(date) {
   const timeFormated = { years, months, days, hours, minutes, seconds };
   return timeFormated;
 }
-
 
 function formatDate(time) {
   let dateFormated = {
@@ -52,3 +25,4 @@ function formatDate(time) {
 
   return dateFormated;
 }
+
