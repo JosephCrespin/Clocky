@@ -1,13 +1,13 @@
 "use strict"
 
-const calendar = document.getElementById("date");
 const clock = document.getElementById("clock");
+const calendar = document.getElementById("date");
 
-let intermediate;
+let clockIntermediate;
 
-function startClock() {
+function showClock() {
   const oneSecond = 1000;
-  intermediate = setInterval(() => {
+  clockIntermediate = setInterval(() => {
     let dates = new Date(Date.now());
 
     let today = formatDate(dates);
@@ -15,10 +15,10 @@ function startClock() {
   }, oneSecond);
 }
 
-function printOnClock(date) {
+function printOnClock(time) {
   
-  clock.innerHTML = `${date.hour} : ${date.minutes} : ${date.seconds}`;
-  calendar.innerHTML = `${date.weekDay} , ${date.month} ${date.dayOfMonth}  ,${date.year}`;
+  clock.innerHTML = `${time.hour} : ${time.minutes} : ${time.seconds}`;
+  calendar.innerHTML = `${time.weekDay} , ${time.month} ${time.dayOfMonth}  ,${time.year}`;
 }
 
-window.onload = startClock();
+window.onload = showClock();

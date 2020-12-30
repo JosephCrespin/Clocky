@@ -7,8 +7,8 @@ function formatTime(date) {
   const seconds = Math.floor(date / 1000) % 60;
   const months = Math.floor(days / 30);
   const years = Math.floor(days / 365);
-
   const timeFormated = { years, months, days, hours, minutes, seconds };
+  
   return timeFormated;
 }
 
