@@ -5,14 +5,14 @@ const calendar = document.getElementById("date");
 
 let clockIntermediate;
 
-function showClock() {
-  const oneSecond = 1000;
+function showOnClock() {
+  
   clockIntermediate = setInterval(() => {
     let dates = new Date(Date.now());
 
     let today = formatDate(dates);
     printOnClock(today);
-  }, oneSecond);
+  });
 }
 
 function printOnClock(time) {
@@ -21,4 +21,4 @@ function printOnClock(time) {
   calendar.innerHTML = `${time.weekDay} , ${time.month} ${time.dayOfMonth}  ,${time.year}`;
 }
 
-window.onload = showClock();
+window.onload = showOnClock();
