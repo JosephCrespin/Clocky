@@ -38,7 +38,7 @@ body {
     
 }
 
-@media only screen and ( max-width: 450px) {
+@media only screen and ( max-width: 950px) {
     body {
         background-image: url('https://cdn.dribbble.com/users/1396703/screenshots/3952983/pixel-goust-2.gif');
         background-position: center center;
